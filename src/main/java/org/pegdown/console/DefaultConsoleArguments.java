@@ -33,7 +33,7 @@ public class DefaultConsoleArguments implements ConsoleArguments {
 	}
 
 	public String getConsoleHelp() {
-		return "pegdownconsole [OPTION] -i MARKDOWNFILE (-o HTMLFILE)";
+		return "pegdownconsole -i MARKDOWNFILE [-o HTMLFILE]";
 	}
 	
 }

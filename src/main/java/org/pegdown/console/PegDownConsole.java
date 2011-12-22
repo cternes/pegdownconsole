@@ -27,8 +27,7 @@ public class PegDownConsole {
 	}
 	
 	public void init(String[] args) {
-		ConsolePrinter.printMessage("Running "+ NAME + " V"+VERSION);
-		ConsolePrinter.printMessage("------------------------------");
+		printHeader();
 		
 		new DefaultConsoleArguments();
 		if(args == null || args.length == 0) {
@@ -37,6 +36,13 @@ public class PegDownConsole {
 		else {
 			parseArguments(args);
 		}
+	}
+
+	private void printHeader() {
+		ConsolePrinter.printMessage("");
+		ConsolePrinter.printMessage("------------------------------");
+		ConsolePrinter.printMessage("Running "+ NAME + " V"+VERSION);
+		ConsolePrinter.printMessage("------------------------------");
 	}
 
 	private void printUsage() {
