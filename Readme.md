@@ -34,6 +34,10 @@ markdown file but with the _.html_ extension.
 
 Note: If the absolute path to your Markdown file contains spaces, please enclose the path with ".
 
+Credits
+-------
+I want to thank Sirthias who is the developer of the beautiful [pegdown] processor for his great work!
+
 License
 -------
 
