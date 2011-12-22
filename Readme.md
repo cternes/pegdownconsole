@@ -8,10 +8,7 @@ command line.
 Installation
 ------------
 
-1. Download from [Download Page].
-
-OR
-
+1. Download from [Download Page]. OR
 2. Build from source with Maven
 
 If you have maven installed execute the following on a command line:
