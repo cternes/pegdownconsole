@@ -19,7 +19,13 @@ public class DefaultMarkdownProcessor implements MarkdownProcessor {
 
 	public String parseMarkdown(String markdown) {
 		if(markdown != null && !markdown.isEmpty()) {
-			return processor.markdownToHtml(markdown);
+			String header = createHeader();
+			String html = processor.markdownToHtml(markdown);
+			String footer = createFooter();
+			
+			String finalHtml = header + html + footer;
+			
+			return finalHtml;
 		}
 		return "";
 	}
@@ -29,6 +35,24 @@ public class DefaultMarkdownProcessor implements MarkdownProcessor {
 			ConsolePrinter.printError("MarkdownWriter is null. Please provide a proper MarkdownWriter Implementation.");
 		}
 		writer.writeHtml(html);
+	}
+	
+	private String createHeader() {
+		StringBuilder header = new StringBuilder();
+		header.append("<html>");
+		header.append("<head>");
+		header.append("</head>");
+		header.append("<body>");
+		
+		return header.toString();
+	}
+	
+	private String createFooter() {
+		StringBuilder footer = new StringBuilder();
+		footer.append("</body>");
+		footer.append("</html>");
+		
+		return footer.toString();
 	}
 
 
