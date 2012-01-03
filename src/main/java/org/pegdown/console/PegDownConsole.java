@@ -15,7 +15,7 @@ import org.pegdown.console.writer.FileMarkdownWriter;
 public class PegDownConsole {
 
 	private static final String NAME = "PegDownConsole";
-	private static final String VERSION = "0.0.1";
+	private static final String VERSION = "0.0.2";
 	
 	private CommandLine cmd;
 	private ConsoleArguments consoleArguments = new DefaultConsoleArguments();
